@@ -1,0 +1,112 @@
+body{
+    background-color: bisque;
+}
+
+
+
+
+.image{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+
+    /* align-items:stretch; */
+    padding:40px 40px;
+    margin:20px;
+}
+
+@keyframes biggy{
+    0%{
+        text-shadow: 2px 3px 5px rgb(0, 25, 55);
+        transition: all  ease-in-out 1s;
+    }
+
+    15% {
+        text-shadow: 2px 3px 5px rgb(0, 225, 255);
+        transition: all  ease-in-out 1s;
+    }
+
+    30% {
+        text-shadow: 2px 3px 5px white;
+        transition: all  ease-in-out 1s;
+    }
+
+    45% {
+        text-shadow: 2px 3px 5px bisque;
+        transition: all  ease-in-out 1s;
+    }
+
+    60% {
+        text-shadow: 2px 3px 5px yellow;
+        transition: all  ease-in-out 1s;
+    }
+
+    85%{
+      text-shadow: 2px 3px 5px green;
+      transition: all  ease-in-out 1s;
+    }
+    100%{
+        text-shadow: 2px 3px 5px rgb(255, 0, 0);
+        transition: all  ease-in-out 1s;
+    }
+
+}
+#select{
+    display: flex;
+    /* background-color: blue; */
+    width: 100%;
+    height: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+    align-items: center;
+  }
+
+.heading{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 3px 5px rgb(0, 225, 255);
+    font-size: 25px;
+    background-color: white;
+    transition: all  ease-in-out 1s;
+    animation:biggy 2s ease-in-out 1s infinite both;
+
+}
+
+
+.heading:hover{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 3px 2px rgb(248, 247, 247);
+    font-size: 30px;
+    /* background: rgb(52, 255, 120); */
+    background:aqua;
+    animation:biggy 2s ease-in-out 1s 10 both;
+}
+
+.image > div{
+
+
+    border:2px solid burlywood;
+    border-radius:40px;
+    margin:40px 50px;
+    animation-fill-mode: both;
+    overflow: hidden;
+
+}
+
+.image > div :hover{
+
+    filter:invert(0.7);
+    /* filter:brightness(100%);  */
+
+}
+
+.image img{
+  width: 240px;
+  object-fit:fill;
+  height: 186px;
+
+}

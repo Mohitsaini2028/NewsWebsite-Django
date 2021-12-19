@@ -1,0 +1,46 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    {% block links %} {% endblock %}
+    <title>{% block title %} {% endblock %}</title>
+     <style>
+       {% block css %} {% endblock %}
+  </style>
+  </head>
+  <body>
+    <nav class="navbar background h-nav-resp">
+
+      <ul class="nav-list v-class-resp">
+
+          <div class="logo" id="home"><img src="{% static 'image/logo1.png' %}" alt="Logo"></div>
+          <li> <a href="/" title="Visit Home page"> Home</a></li>
+          <li> <a href="#about"> About Us</a></li>
+          <li> <a href="/news/latest-news/" title="Gets Latest News"> Latest News</a></li>
+          <li> <a href="/news/contact-us/" title="Switch to Contact Page"> Contact Us</a></li>
+      </ul>
+      <div class="rightNav v-class-resp" >
+        <form action='/search-news/' method="get">
+          <input type="text" name="text" id="search" placeholder="Searh News Here" required>
+          <button type="submit" class="btn btn-sm">Search</button>
+        </form>
+      </div>
+
+
+    </nav>
+
+
+      {% block body %} {% endblock %}
+      <footer class="background">
+        <p class="text-footer">
+            Copyright &copy; 2027 NewsHub.com - All Right Reserved
+        </p>
+    </footer>
+      {% block js %} {% endblock %}
+</body>
+</html>

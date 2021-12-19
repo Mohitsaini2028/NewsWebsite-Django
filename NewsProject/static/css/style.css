@@ -1,0 +1,153 @@
+
+
+body{
+  padding: 0px;
+  margin: 0px;
+}
+
+.headlines h1{
+  padding: 20px;
+}
+
+.background{
+  background: rgba(0, 0, 0, 0.9) url("{% static 'image/india.png' %}");
+  background-size: cover;
+  background-blend-mode: darken;
+  }
+
+
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top:0;
+  z-index:2;
+}
+
+.nav-list{
+  width: 70%;
+
+  display: flex;
+  align-items: center;
+
+}
+
+.nav-list li{
+  list-style: none;
+  padding: 10px 30px;
+}
+
+.nav-list li a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.nav-list li a:hover{
+  text-decoration: none;
+  color: rgb(238, 5, 5);
+
+}
+
+.btn:hover{
+cursor: pointer;
+}
+
+.text-big{
+  font-size: 35px;
+
+}
+
+
+.text-small{
+  font-size: 18px;
+}
+
+
+.logo{
+  width: 20%;
+  /* position: relative; */
+  /* right: 30px; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.logo img{
+  width: 60%;
+  border: 2px solid  white;
+  border-radius: 150px;
+  /* display: flex; */
+}
+
+
+
+
+.section{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width:95%;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 10px;
+}
+
+
+
+.paras a{
+text-decoration: none;
+display: inline-block;
+padding: 3px 10px;
+font-size: 22px;
+color: rgb(255, 255, 255);
+background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+.paras a:hover{
+  text-decoration: none;
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 22px;
+  color: rgb(255, 255, 255);
+  background-color: #de9c4a;
+  }
+
+
+.text-footer{
+  text-align: center;
+  padding: 30px 0;
+  font-family: 'Ubuntu', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+
+.paras{
+  padding: 0px 24px;
+}
+
+
+.thumbnail img{
+  width: 400px;
+  border: 2px solid black;
+  border-radius: 26px;
+  margin-top: 18px;
+  margin-left: 10px;
+}
+
+
+.headlines{
+  font-family: 'Ubuntu', sans-serif;
+  padding: 10px;
+  margin-bottom: 33px;
+}
+
+.headl h1{
+  background-color:#de9c4a;
+  padding:20px;
+}

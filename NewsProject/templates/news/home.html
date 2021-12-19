@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+    {% block title %}NewsHub.com {% endblock %}
+
+
+    {% block links %}
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0" nonce="cB18Sr7Y"></script>
+    <link rel="stylesheet" href="{% static 'css/homeStyle.css' %}">
+    {% endblock %}
+
+     {% block css %}
+      .bg-image{
+          display: flex;
+          /* width:100%; */
+          height: 800px;
+          background: rgba(0, 0, 0, 0.6) url("{% static 'image/bg.jpg' %}");
+          background-size: cover;
+          background-blend-mode: darken;
+          justify-content: center;
+          align-items: center;
+          color: antiquewhite;
+          font-size: 27px;
+          padding: 30px;
+
+      }
+      {% endblock %}
+
+
+      {% block body %}
+
+
+
+  <div class="heading">
+    <h1>WELCOME TO NEWS HUB</h1>
+  </div>
+    <div class="bg-image">
+
+    <p>
+        "The media transforms the great silence of things into its opposite. Formerly constituting a secret, the real now talks constantly. News reports, information, statistics, and surveys are everywhere."
+        <mark>-Michel de Certeau</mark>
+    </p>
+    </div>
+
+<div class="image">
+    <div id="select">
+        <h2>SELECT ANY</h2>
+    </div>
+    <div>
+       <a href="/news/latest-news/" ><img src="{% static 'image/india.png' %}" alt="india image"></a>
+    </div>
+    <div>
+        <a href="/news/tech/latest-news/" ><img src="{% static 'image/tech.png' %}" alt="tech image"></a>
+    </div>
+    <div>
+        <a href="/news/sports/latest-news/" ><img src="{% static 'image/sports.png' %}" alt="sports image"></a>
+    </div>
+
+    <div>
+        <a href="/news/politics/latest-news/" ><img src="{% static 'image/politics.png' %}" alt="politics image"></a>
+    </div>
+    <div>
+      <a href="/news/space/latest-news/" ><img src="{% static 'image/space2.png' %}" alt="space image"></a>
+    </div>
+    <div>
+        <a href="/news/entertainment/latest-news/" ><img src="{% static 'image/entertainment.png' %}" alt="entertainment image"></a>
+    </div>
+    <div>
+        <a href="/news/international/latest-news/" ><img src="{% static 'image/international.png' %}" alt="international image"></a>
+    </div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}
