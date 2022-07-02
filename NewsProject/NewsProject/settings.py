@@ -29,7 +29,7 @@ STATIC_DIR=os.path.join(BASE_DIR,'static')
 DEBUG = True
 
 ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ['192.168.43.249']
+
 # ALLOWED_HOSTS = ['*'] for all
 
 # Application definition

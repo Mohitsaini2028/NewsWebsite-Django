@@ -8,8 +8,8 @@ import json
 import inspect
 from django.contrib import messages
 
-
-apiKey="Enter Your API here" # In String Format
+apiKey="Enter Your API here"
+# In String Format
 
 
 def home(request):

@@ -17,11 +17,16 @@ from django.contrib import admin
 from django.urls import path
 from news import views
 from django.conf.urls import include
+from django.conf import settings
+
+from django.views.static import serve
+from django.conf.urls import url
 
 urlpatterns = [
     path('',views.home),
     path('news/',include('news.urls')),
     path('search-news/',include('news.urls')),
     path('admin/', admin.site.urls),
+    
 
 ]
