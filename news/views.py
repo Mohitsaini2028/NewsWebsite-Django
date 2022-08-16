@@ -8,7 +8,13 @@ import json
 import inspect
 from django.contrib import messages
 
-apiKey="d9ca3fc9584349468644a39cd6515de5"
+import environ
+
+# Initialise environment variables
+env = environ.Env()
+environ.Env.read_env()
+
+apiKey= env('API_KEY')
 # In String Format
 
 

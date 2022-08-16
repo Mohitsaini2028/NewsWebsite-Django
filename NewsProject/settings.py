@@ -14,6 +14,12 @@ from pathlib import Path
 import os
 from django.contrib.messages import constants as messages
 
+import environ
+
+# Initialise environment variables
+env = environ.Env()
+environ.Env.read_env()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -24,7 +30,8 @@ STATIC_DIR=os.path.join(BASE_DIR,'static')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = ''
-SECRET_KEY = '-h6-0l+i-oz=^_)_#l)$_p4rq4t--ll_lnt8%@5e-q-cjv2z6e'
+SECRET_KEY = env('SECRET_KEY')
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
