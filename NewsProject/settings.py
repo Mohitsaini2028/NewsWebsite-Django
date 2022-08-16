@@ -15,6 +15,7 @@ import os
 from django.contrib.messages import constants as messages
 
 import environ
+import os
 
 # Initialise environment variables
 env = environ.Env()
@@ -30,12 +31,12 @@ STATIC_DIR=os.path.join(BASE_DIR,'static')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = ''
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["news-hub-webapp.herokuapp.com", "localhost"]
 
 # ALLOWED_HOSTS = ['*'] for all
 
@@ -53,6 +54,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -131,9 +133,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
 STATICFILES_DIRS=[
     STATIC_DIR,
 ]
+
+STATIC_ROOT = BASE_DIR / 'static'
 
 MESSAGE_TAGS={
     messages.ERROR:'danger'
