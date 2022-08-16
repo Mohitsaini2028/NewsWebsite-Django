@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+    {% block title %}NewsHub.com {% endblock %}
+
+
+    {% block links %}
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0" nonce="cB18Sr7Y"></script>
+    {% endblock %}
+
+
+    {% block css %}
+    .fb_iframe_widget {
+
+      padding-left: 10px;
+    }
+     {% endblock %}
+
+
+
+
+  <body>
+{% block body %}
+
+
+
+
+    {%for title in arts %}
+
+      <div class="headlines">
+          {% if title.title is not none and  title.description is not none %}
+          <div class="headl">
+            <h1>{{title.title}}</h1>
+          </div>
+            <section class="section">
+
+              <div class="paras">
+                <!-- yha for loop lgana -->
+                {% if title.description is not  none %}  <!-- PYTHON'S None is none in jinja -->
+                <p>{{title.description | safe }}</p>
+                {% endif %}
+                {% if title.content is not  none %} <!-- PYTHON'S None is none in jinja -->
+                <p>{{title.content | safe }}</p>
+                {% endif %}
+                {% if title.url is not  none %}  <!-- PYTHON'S None is none in jinja -->
+                <a href="{{title.url}}" title="for reading more click the more button ">more</a>
+                {% endif %}
+              </div>
+
+
+              <div class="thumbnail">
+                {% if title.urlToImage is not  none %}  <!-- PYTHON'S None is none in jinja -->
+                <img src="{{title.urlToImage}}" alt="image">
+                {% endif %}
+
+              </div>
+            </section>
+            {% endif %}
+
+      </div>
+    {% endfor %}
+
+
+    <div class="fb-comments" data-href="news/latest-news/" data-width="1200" data-numposts="5"></div>
+    <div class="fb-like" data-href="news/latest-news/" data-width="" padding-left="20px" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
+
+  
+
+
+{% endblock %}
